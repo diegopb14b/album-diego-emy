@@ -1,0 +1,105 @@
+/* Estilos generales para todas las pantallas */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8E8E8; /* Fondo rosado pastel */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFC0CB; /* Color más oscuro para el header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+nav {
+    background-color: #FFE4E1; /* Color para el fondo del nav */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Estilos para las secciones */
+main {
+    padding: 20px;
+}
+
+section {
+    display: none; /* Inicialmente oculto */
+}
+
+section.hidden {
+    display: none;
+}
+
+section:not(.hidden) {
+    display: block;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria img, .galeria video {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img, .galeria video {
+        width: 100%; /* Las imágenes y videos se ajustan al 100% del ancho en pantallas pequeñas */
+        margin: 5px 0;
+    }
+}
+
+/* Estilos para pantallas grandes (tablets, PC) */
+@media only screen and (min-width: 601px) {
+    .galeria img, .galeria video {
+        width: 30%;
+        margin: 10px;
+    }
+}
